@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h1>Home</h1>
+    <p>please view our teams!</p>
+    {% for team in teams %}
+    <li> <a href="{% url 'teamInfo' team %}">{{team}}</a></li>
+    {% endfor %}
+</div>
+{% endblock content%}
